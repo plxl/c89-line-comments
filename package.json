@@ -1,0 +1,34 @@
+{
+  "name": "c89-line-comments",
+  "displayName": "C89 Line Comments",
+  "description": "Overrides single-line comments in C files to use C89-compliant block comments line-by-line.",
+  "version": "1.0.0",
+  "repository": "https://github.com/plxl/c89-line-comments",
+  "author": "plxl",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:c"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "c89-line-comments.toggleLineComment",
+        "title": "Toggle C89 Line Comment"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "c89-line-comments.toggleLineComment",
+        "key": "ctrl+/",
+        "mac": "cmd+/",
+        "when": "editorTextFocus && editorLangId == 'c'"
+      }
+    ]
+  }
+}
